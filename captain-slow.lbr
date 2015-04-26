@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -1923,6 +1923,53 @@ HLK-PM01
 <wire x1="15" y1="-3" x2="20" y2="-3" width="0.3048" layer="21"/>
 <wire x1="20" y1="-3" x2="20" y2="-6.5" width="0.3048" layer="21"/>
 </package>
+<package name="ESP8266-12">
+<wire x1="8" y1="12" x2="8" y2="-12" width="0.127" layer="21"/>
+<wire x1="8" y1="-12" x2="-8" y2="-12" width="0.127" layer="21"/>
+<wire x1="-8" y1="-12" x2="-8" y2="12" width="0.127" layer="21"/>
+<wire x1="-8" y1="12" x2="8" y2="12" width="0.127" layer="21"/>
+<smd name="VCC" x="-8" y="-10.9" dx="2" dy="1" layer="1"/>
+<smd name="GPIO13" x="-8" y="-8.9" dx="2" dy="1" layer="1"/>
+<smd name="GPIO12" x="-8" y="-6.9" dx="2" dy="1" layer="1"/>
+<smd name="GPIO14" x="-8" y="-4.9" dx="2" dy="1" layer="1"/>
+<smd name="GPIO16" x="-8" y="-2.9" dx="2" dy="1" layer="1"/>
+<smd name="CH_PD" x="-8" y="-0.9" dx="2" dy="1" layer="1"/>
+<smd name="ADC" x="-8" y="1.1" dx="2" dy="1" layer="1"/>
+<smd name="RXD" x="8" y="1.1" dx="2" dy="1" layer="1"/>
+<smd name="GPIO4" x="8" y="-0.9" dx="2" dy="1" layer="1"/>
+<smd name="GPIO5" x="8" y="-2.9" dx="2" dy="1" layer="1"/>
+<smd name="GPIO0" x="8" y="-4.9" dx="2" dy="1" layer="1"/>
+<smd name="GPIO2" x="8" y="-6.9" dx="2" dy="1" layer="1"/>
+<smd name="GPIO15" x="8" y="-8.9" dx="2" dy="1" layer="1"/>
+<smd name="GND" x="8" y="-10.9" dx="2" dy="1" layer="1"/>
+<smd name="REST" x="-8" y="3.1" dx="2" dy="1" layer="1"/>
+<smd name="TXD" x="8" y="3.1" dx="2" dy="1" layer="1"/>
+<text x="0" y="-3" size="1.778" layer="21" font="vector" rot="R90" align="center">ESP8266-12</text>
+<polygon width="0.127" layer="39">
+<vertex x="-10" y="14"/>
+<vertex x="-10" y="5"/>
+<vertex x="10" y="5"/>
+<vertex x="10" y="14"/>
+</polygon>
+<polygon width="0.127" layer="40">
+<vertex x="-10" y="14"/>
+<vertex x="-10" y="5"/>
+<vertex x="10" y="5"/>
+<vertex x="10" y="14"/>
+</polygon>
+<polygon width="0.127" layer="41">
+<vertex x="-10" y="14"/>
+<vertex x="-10" y="5"/>
+<vertex x="10" y="5"/>
+<vertex x="10" y="14"/>
+</polygon>
+<polygon width="0.127" layer="42">
+<vertex x="-10" y="14"/>
+<vertex x="-10" y="5"/>
+<vertex x="10" y="5"/>
+<vertex x="10" y="14"/>
+</polygon>
+</package>
 </packages>
 <symbols>
 <symbol name="TSOT-23.5">
@@ -2158,6 +2205,29 @@ HLK-PM01
 <wire x1="2.54" y1="7.62" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="2.54" y1="-5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="-5.08" x2="-2.54" y2="7.62" width="0.254" layer="94"/>
+</symbol>
+<symbol name="ESP8266-12">
+<pin name="GPIO16" x="-17.78" y="2.54" visible="pin" length="middle"/>
+<pin name="CH_PD" x="-17.78" y="7.62" visible="pin" length="middle"/>
+<pin name="ADC" x="-17.78" y="12.7" visible="pin" length="middle"/>
+<pin name="REST" x="-17.78" y="17.78" visible="pin" length="middle"/>
+<pin name="GPIO14" x="-17.78" y="-2.54" visible="pin" length="middle"/>
+<pin name="GPIO12" x="-17.78" y="-7.62" visible="pin" length="middle"/>
+<pin name="GPIO13" x="-17.78" y="-12.7" visible="pin" length="middle"/>
+<pin name="GPIO15" x="17.78" y="-12.7" visible="pin" length="middle" rot="R180"/>
+<pin name="GPIO2" x="17.78" y="-7.62" visible="pin" length="middle" rot="R180"/>
+<pin name="GPIO0" x="17.78" y="-2.54" visible="pin" length="middle" rot="R180"/>
+<pin name="GPIO5" x="17.78" y="2.54" visible="pin" length="middle" rot="R180"/>
+<pin name="RXD" x="17.78" y="12.7" visible="pin" length="middle" rot="R180"/>
+<pin name="GPIO4" x="17.78" y="7.62" visible="pin" length="middle" rot="R180"/>
+<pin name="TXD" x="17.78" y="17.78" visible="pin" length="middle" rot="R180"/>
+<wire x1="-12.7" y1="20.32" x2="12.7" y2="20.32" width="0.254" layer="94"/>
+<wire x1="12.7" y1="20.32" x2="12.7" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-20.32" x2="-12.7" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-20.32" x2="-12.7" y2="20.32" width="0.254" layer="94"/>
+<pin name="VCC" x="-17.78" y="-17.78" visible="pin" length="middle"/>
+<pin name="GND" x="17.78" y="-17.78" visible="pin" length="middle" rot="R180"/>
+<text x="0" y="0" size="2.54" layer="94" font="vector" ratio="9" rot="R90" align="center">ESP8266-12</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -2536,6 +2606,36 @@ Mouser Part No:	863-MBRA140T3G</description>
 <connect gate="G$1" pin="RST" pad="RST"/>
 <connect gate="G$1" pin="RX" pad="RX"/>
 <connect gate="G$1" pin="TX" pad="TX"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ESP8266-12">
+<gates>
+<gate name="G$1" symbol="ESP8266-12" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ESP8266-12">
+<connects>
+<connect gate="G$1" pin="ADC" pad="ADC"/>
+<connect gate="G$1" pin="CH_PD" pad="CH_PD"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="GPIO0" pad="GPIO0"/>
+<connect gate="G$1" pin="GPIO12" pad="GPIO12"/>
+<connect gate="G$1" pin="GPIO13" pad="GPIO13"/>
+<connect gate="G$1" pin="GPIO14" pad="GPIO14"/>
+<connect gate="G$1" pin="GPIO15" pad="GPIO15"/>
+<connect gate="G$1" pin="GPIO16" pad="GPIO16"/>
+<connect gate="G$1" pin="GPIO2" pad="GPIO2"/>
+<connect gate="G$1" pin="GPIO4" pad="GPIO4"/>
+<connect gate="G$1" pin="GPIO5" pad="GPIO5"/>
+<connect gate="G$1" pin="REST" pad="REST"/>
+<connect gate="G$1" pin="RXD" pad="RXD"/>
+<connect gate="G$1" pin="TXD" pad="TXD"/>
+<connect gate="G$1" pin="VCC" pad="VCC"/>
 </connects>
 <technologies>
 <technology name=""/>
